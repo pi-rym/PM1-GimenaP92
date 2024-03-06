@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+      <!-- Enlace al archivo styles.css -->
+      <link rel="stylesheet" href="./styles/styles.css">
+     <!-- Enlace al archivo reset.css -->
+     <link rel="stylesheet" href="./styles/reset.css">
+      <!-- Enlace tipos de fuentes -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Presentación M1</title>
 </head>
 <body>
-    <h1>Proyecto M1</h1>
+    <section class="presentacion">
+    <h2>Sobre Mi...</h2>
+    <p>Hola, mi nombre es Gimena, actualmente me dedico a la kinesiología. Hace un tiempo comencé a escuchar acerca de la programación y me interesó cada vez más; Es por ésto, que decidí comenzar éste bootcamp para poder desarrollarlo de manera profesional.</p>
+</section>
+    <section class="tecnologias">
+            <h3>Mis Tecnologías Favoritas</h3>
+            <div class="container-tecnologias">
+            <div class="card">
+                <h4>HTML</h4>
+                <img class="img-tecnologias"   src="./imagenes/html.png" alt="Tecnología 1">
+            </div>
+            <div class="card">
+                <h4>CSS</h4>
+                <img class="img-tecnologias"  src="./imagenes/css.png" alt="Tecnología 2">
+            </div>
+            <div class="card">
+                <h4>JAVASCRIPT</h4>
+                <img class="img-tecnologias" src="./imagenes/js.png" alt="Tecnología 3">
+            </div>
+        </div>
+</section>
+<section id="mis-actividades">
+    <h2>Mis Actividades Favoritas</h2>
+    <form id="formulario-actividad">
+        <div>
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo" required>
+        </div>
+        <div>
+            <label for="descripcion">Descripción</label>
+            <input type="text" id="descripcion" name="descripcion" required>
+        </div>
+        <div>
+            <label for="imagen">URL de Imagen</label>
+            <input type="url" id="imagen" name="imagen" required>
+        </div>
+        <button class="boton" type="submit">Agregar Actividad</button>
+    </form>
+    <div id="contenedor-actividades">
+    </div>
+</section>
 </body>
 </html>
