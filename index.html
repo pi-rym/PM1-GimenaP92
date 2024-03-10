@@ -8,52 +8,77 @@
      <!-- Enlace al archivo reset.css -->
      <link rel="stylesheet" href="./styles/reset.css">
       <!-- Enlace tipos de fuentes -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Presentación M1</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+      <!-- Enlace fuente titulo -->
+      <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital@0;1&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <!--Link para icono de pestaña-->
+     <link rel="icon" href="./imagenes/logohenry.png" type="image/x-icon">
+      <title>Presentación M1</title>
 </head>
 <body>
     <section class="presentacion">
-    <h2>Sobre Mi...</h2>
-    <p>Hola, mi nombre es Gimena, actualmente me dedico a la kinesiología. Hace un tiempo comencé a escuchar acerca de la programación y me interesó cada vez más; Es por ésto, que decidí comenzar éste bootcamp para poder desarrollarlo de manera profesional.</p>
+     <div class="container-presentacion">
+         <h2 class="titulo-presentacion">Sobre Mi...</h2>
+         <img src="./imagenes/img-personal.png" class="img-personal" alt="imagen personal"/>
+         <p class="parrafo-presentacion">Hola, mi nombre es Gimena, actualmente me dedico a la kinesiología. Hace un tiempo comencé a escuchar acerca de la programación y me interesó cada vez más; Es por ésto, que decidí comenzar éste bootcamp para poder desarrollarlo de manera profesional.</p>
+    </div>
 </section>
-    <section class="tecnologias">
-            <h3>Mis Tecnologías Favoritas</h3>
-            <div class="container-tecnologias">
-            <div class="card">
-                <h4>HTML</h4>
-                <img class="img-tecnologias"   src="./imagenes/html.png" alt="Tecnología 1">
+<section class="tecnologias">
+    <div class="container-tecnologias">
+        <h3 class="titulo-tecnologias">Mis Tecnologías Favoritas</h3>
+        <div class="card">
+            <div class="bg">
+                <h4 class="titulo-card">HTML</h4>
+                <img class="img-tecnologias" src="./imagenes/html.png" alt="Tecnología 1">
             </div>
-            <div class="card">
-                <h4>CSS</h4>
-                <img class="img-tecnologias"  src="./imagenes/css.png" alt="Tecnología 2">
-            </div>
-            <div class="card">
-                <h4>JAVASCRIPT</h4>
-                <img class="img-tecnologias" src="./imagenes/js.png" alt="Tecnología 3">
-            </div>
+            <div class="blob"></div>
         </div>
+        <div class="card">
+            <div class="bg">
+                <h4 class="titulo-card">CSS</h4>
+                <img class="img-tecnologias" src="./imagenes/css.png" alt="Tecnología 2">
+            </div>
+            <div class="blob"></div>
+        </div>
+        <div class="card">
+            <div class="bg">
+                <h4 class="titulo-card">JavaScript</h4>
+                <img class="img-tecnologias" src="./imagenes/javascript.png" alt="Tecnología 3">
+            </div>
+            <div class="blob"></div>
+        </div>
+    </div>
 </section>
-<section id="mis-actividades">
-    <h2>Mis Actividades Favoritas</h2>
-    <form id="formulario-actividad">
+<section class="seccion-actividades">
+    <div class="mis-actividades">
+    <h2 class="titulo-actividades">Mis Actividades Favoritas</h2>
+    <form class="formulario-actividad">
         <div>
-            <label for="titulo">Título</label>
+            <label class="label-form" for="titulo">Título</label>
             <input type="text" id="titulo" name="titulo" required>
         </div>
         <div>
-            <label for="descripcion">Descripción</label>
+            <label class="label-form" for="descripcion">Descripción</label>
             <input type="text" id="descripcion" name="descripcion" required>
         </div>
         <div>
-            <label for="imagen">URL de Imagen</label>
-            <input type="url" id="imagen" name="imagen" required>
-        </div>
-        <button class="boton" type="submit">Agregar Actividad</button>
+            <label class="label-form" for="imagen">URL de Imagen</label>
+            <input type="url" id="imagen-actividades" name="imagen" required>
+        </div> 
+        <button>
+            <span class="button_top"> 
+                 Agregar Actividad
+            </span>
+          </button>
     </form>
     <div id="contenedor-actividades">
     </div>
+</div>
 </section>
+<footer>
+    <!--Creado henry -->
+</footer>
 </body>
 </html>
