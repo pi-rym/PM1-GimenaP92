@@ -33,7 +33,8 @@
 
     const repository = new Repository();
 
-    function convertInstanceToHtml(activity) {
+
+    /*function convertInstanceToHtml(activity) {
 
         const {id, title, description, imgUrl} = activity;
 
@@ -108,42 +109,45 @@
     
     /*Escuchar evento del boton crear actividad*/ 
             
-     const botonCreate = document.getElementById('buttonCreateActivity');
-     botonCreate.addEventListener('click', function(event) {
-            handler(event);
-        });
-        
-     /*Escuchar evento de tecla enter para crear actividad*/ 
-     form.addEventListener('keypress', function(event) {
-        if (event.target.tagName.toLowerCase() === 'input') {
-            handleKeyPress(event);
-            }
-            });
+    const botonCreate = document.getElementById('buttonCreateActivity');
+    botonCreate.addEventListener('click', function(event) {
+           handler(event);
+       });
+       
+    /*Escuchar evento de tecla enter para crear actividad*/ 
+    form.addEventListener('keypress', function(event) {
+       if (event.target.tagName.toLowerCase() === 'input') {
+           handleKeyPress(event);
+           }
+           });
 
-    
-  /* EXTRA CREDIT. Implementar la funcionalidad de eliminar tarjetas del contenedor al hacer click sobre ellas o sobre algún nuevo botón que podamos agregar a las mismas. Eres libre de encarar esta funcionalidad de la manera que consideres adecuada. 🤖 Puedes apoyarte en la IA para ayudarte a realizar este punto. 🤖
-   al hacer click sobre la card, se llama a funcion eliminarActividad
-  
-  */ 
-        
-    // Escucha el clic en el contenedor de actividades
+   
+ /* EXTRA CREDIT. Implementar la funcionalidad de eliminar tarjetas del contenedor al hacer click sobre ellas o sobre algún nuevo botón que podamos agregar a las mismas. Eres libre de encarar esta funcionalidad de la manera que consideres adecuada. 🤖 Puedes apoyarte en la IA para ayudarte a realizar este punto. 🤖
+  al hacer click sobre la card, se llama a funcion eliminarActividad
+ 
+ */ 
+       
+   // Escucha el clic en el contenedor de actividades
 document.getElementById('contenedor-actividades').addEventListener('click', function(event) {
-    // Verifica si el clic fue en una tarjeta de actividad
-    if (event.target.closest('.activity-card')) {
-        // Obtiene el contenedor de la tarjeta de actividad
-        const cardContainer = event.target.closest('.activity-card');
-        // Obtiene el ID de la actividad desde el atributo de datos
-        const activityId = cardContainer.dataset.activityId;
-        // Elimina la actividad utilizando su ID
-        deleteActivity(parseInt(activityId)); // Asegúrate de convertir el ID a un número entero
-        // Elimina la tarjeta de actividad del DOM
-        cardContainer.remove();
-    }
+   // Verifica si el clic fue en una tarjeta de actividad
+   if (event.target.closest('.activity-card')) {
+       // Obtiene el contenedor de la tarjeta de actividad
+       const cardContainer = event.target.closest('.activity-card');
+       // Obtiene el ID de la actividad desde el atributo de datos
+       const activityId = cardContainer.dataset.activityId;
+       // Elimina la actividad utilizando su ID
+       deleteActivity(parseInt(activityId)); // Asegúrate de convertir el ID a un número entero
+       // Elimina la tarjeta de actividad del DOM
+       cardContainer.remove();
+   }
 });
 
 // Función para eliminar una actividad por su ID
 function deleteActivity(id) {
-    repository.deleteActivity(id);
+   repository.deleteActivity(id);
 }
 
-
+module.exports = {
+    Activity,
+    Repository
+};
