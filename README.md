@@ -11,7 +11,9 @@ En la primera sección, encontrarás una breve introducción personal.
 La segunda sección tiene como objetivo mostrar tres imágenes de mis tecnologías favoritas alineadas en fila.
 
 ## Formulario de Actividades 📋 
-En la tercera sección, he creado un formulario donde puedes ingresar el título, la descripción de una actividad y una URL de una imagen. Al hacer clic en el botón "Agregar", los datos ingresados se reflejarán en la página. Como característica adicional, también he implementado la funcionalidad de que al presionar la tecla "Enter", se realice la misma acción, ¡ya que es más práctico! Además, he añadido la capacidad de eliminar las tarjetas agregadas haciendo clic en ellas.
+En la tercera sección, he creado un formulario donde puedes ingresar el título, la descripción de una actividad y una URL de una imagen. Al hacer clic en el botón "Agregar", los datos ingresados se reflejarán en la página.  
+ Cada card tendrá un boton, el cual al presionarlo podrás eliminar la actvidad deseada.
+
 
 ## Optimización del Código CSS 🎨 
 En el código CSS, he trabajado para reducir la repetición mediante la incorporación de clases para alinear texto y colores de fondo comunes.

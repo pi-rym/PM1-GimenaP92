@@ -257,10 +257,26 @@
       cursor: pointer;
     }
 
+    .delete-button {
+      background-color: #e8e8e8;
+      color: #000000;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      padding: 1%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+  }
+  
+  .delete-button:hover {
+    cursor: pointer;
+    background-color: #ddda24;
+  }
+
     #contenedor-actividades {
       display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+      flex-wrap: wrap;
+      flex-direction: row;
     }
 
   .activity-card {
@@ -271,6 +287,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
     padding: 5%;
   }
 
@@ -292,8 +309,10 @@
   }
 
   .activity-image img {
-    max-width: 100%; 
-    max-height: 100%; 
+    max-width: calc(100% / 3);
+    height: auto; 
+    display: block; 
+    margin: auto;
   }
 
 
@@ -355,4 +374,10 @@
           width: 80%;
           border-radius: 10%;
       }
+
+      #contenedor-actividades {
+       width: 10%;
+      }
+
+      
   }
